@@ -1,0 +1,78 @@
+{
+  "users": {
+    "5733026599": {
+      "id": 5733026599,
+      "username": "Julio15X",
+      "points": 150,
+      "warnings": 1,
+      "banStatus": "active",
+      "banUntil": null,
+      "joinDate": "2025-12-19T09:00:00.000Z",
+      "totalSubmissions": 15,
+      "totalEngagements": 45,
+      "lastActive": "2025-12-19T10:30:00.000Z"
+    },
+    "123456789": {
+      "id": 123456789,
+      "username": "testuser2",
+      "points": 80,
+      "warnings": 2,
+      "banStatus": "temp_banned",
+      "banUntil": "2025-12-26T10:00:00.000Z",
+      "joinDate": "2025-12-18T15:00:00.000Z",
+      "totalSubmissions": 8,
+      "totalEngagements": 16,
+      "lastActive": "2025-12-18T18:30:00.000Z"
+    }
+  },
+  "sessions": {
+    "2025-12-19_morning_1734606000000": {
+      "id": "2025-12-19_morning_1734606000000",
+      "type": "morning",
+      "date": "2025-12-19",
+      "startTime": "2025-12-19T09:00:00.000Z",
+      "endTime": "2025-12-19T09:30:00.000Z",
+      "status": "ended",
+      "participants": [5733026599, 123456789],
+      "submissions": ["sub1", "sub2"],
+      "confirmations": [5733026599]
+    }
+  },
+  "submissions": {
+    "sub1": {
+      "id": "sub1",
+      "userId": 5733026599,
+      "sessionId": "2025-12-19_morning_1734606000000",
+      "link": "https://x.com/Julio15X/status/123456789",
+      "timestamp": "2025-12-19T09:05:00.000Z",
+      "reactionsReceived": []
+    },
+    "sub2": {
+      "id": "sub2",
+      "userId": 123456789,
+      "sessionId": "2025-12-19_morning_1734606000000", 
+      "link": "https://x.com/testuser2/status/987654321",
+      "timestamp": "2025-12-19T09:10:00.000Z",
+      "reactionsReceived": []
+    }
+  },
+  "engagements": [
+    {
+      "userId": 5733026599,
+      "submissionId": "sub2",
+      "sessionId": "2025-12-19_morning_1734606000000",
+      "timestamp": "2025-12-19T09:15:00.000Z",
+      "type": "reaction"
+    }
+  ],
+  "warnings": {
+    "warn1": {
+      "id": "warn1",
+      "userId": 5733026599,
+      "reason": "Late submission warning",
+      "sessionId": "2025-12-19_morning_1734606000000",
+      "timestamp": "2025-12-19T09:35:00.000Z"
+    }
+  },
+  "lastUpdated": "2025-12-19T11:40:00.000Z"
+}

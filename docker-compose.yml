@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  engagement-bot:
+    build: .
+    container_name: x-engagement-bot
+    restart: unless-stopped
+    
+    environment:
+      - NODE_ENV=production
+      - TZ=UTC
+    
+    env_file:
+      - .env
+    
+    ports:
+      - "3000:3000"  # Admin dashboard
+    
+    volumes:
+      - ./data:/app/data  # Persist database
+      - ./logs:/app/logs  # Persist logs
+    
+    healthcheck:
+      test: ["CMD", "node", "-e", "console.log('Health check')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+        reservations:
+          memory: 128M
+    
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
