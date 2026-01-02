@@ -2,10 +2,10 @@
   "name": "x-engagement-bot",
   "version": "1.0.0",
   "description": "Telegram bot for X engagement sessions with automated tracking and enforcement",
-  "main": "dist/index.js",
+  "main": "dist/index-simple.js",
   "type": "module",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node dist/index-simple.js",
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "admin": "tsx admin-real.ts",
