@@ -120,10 +120,11 @@ class SimpleDB {
           for (const [userId, userData] of Object.entries(data.users)) {
             this.users.set(parseInt(userId), {
               ...userData,
-              dailySubmissions: 0, // Reset daily for new session
-              currentSessionSubmitted: false,
-              currentSessionConfirmed: false,
-              sessionSubmissionId: null
+              // Preserve usernames and all existing data
+              dailySubmissions: userData.dailySubmissions || 0, 
+              currentSessionSubmitted: userData.currentSessionSubmitted || false,
+              currentSessionConfirmed: userData.currentSessionConfirmed || false,
+              sessionSubmissionId: userData.sessionSubmissionId || null
             });
           }
         }
