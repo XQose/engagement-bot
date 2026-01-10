@@ -2,12 +2,12 @@
   "name": "x-engagement-bot",
   "version": "1.0.0",
   "description": "Telegram bot for X engagement sessions with automated tracking and enforcement",
-  "main": "bot-working-restored.cjs",
+  "main": "bot-new-sessions.cjs",
   "scripts": {
-    "start": "node bot-working-restored.cjs",
+    "start": "node bot-new-sessions.cjs",
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "admin": "tsx admin-real.ts",
+    "admin": "node admin-real-working.cjs",
     "lint": "eslint src/**/*.ts",
     "format": "prettier --write src/**/*.ts"
   },
